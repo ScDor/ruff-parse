@@ -6,7 +6,7 @@ requires = ["poetry-core"]
 authors = ["ScDor <18174994+ScDor@users.noreply.github.com>"]
 description = ""
 license = "GPL-3.0-or-later"
-name = "ruff-parse"
+name = "ruff_parse"
 readme = "README.md"
 version = "0.1.0"
 
