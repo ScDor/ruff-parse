@@ -36,5 +36,5 @@ class _ViolationList(RootModel):
     root: list[Violation]
 
 
-def parse_output(json_output: str) -> list[Violation]:
+def parse_violations(json_output: str) -> list[Violation]:
     return _ViolationList.model_validate_json(json_output).root
