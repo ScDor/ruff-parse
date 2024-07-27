@@ -5,7 +5,7 @@ from typing import NamedTuple
 import tomllib
 from loguru import logger
 
-from models.rule import Rule
+from ruff_parse.models.rule import Rule
 
 _MIN_RULE_CODE_LEN = 4
 _DEFAULT_SELECT_RULES = ("E", "F")
@@ -50,7 +50,7 @@ class ConfiguredRules(NamedTuple):
 
 
 _DEFAULT_CONFIGURATION = ConfiguredRules(
-    select=set(_DEFAULT_SELECT_RULES), ignore=set()
+    selected_rules=set(_DEFAULT_SELECT_RULES), ignored_rules=set()
 )
 
 

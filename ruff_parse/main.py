@@ -6,13 +6,13 @@ from typing import NamedTuple
 from loguru import logger
 from packaging.version import Version
 
-from models.configured_rules import (
+from ruff_parse.models.configured_rules import (
     _DEFAULT_CONFIGURATION,
     ConfiguredRules,
     _SupportedConfigurationFileNames,
     parse_configured_rules,
 )
-from models.rule import Rule, parse_rules
+from ruff_parse.models.rule import Rule, parse_rules
 
 
 class Ruff(NamedTuple):

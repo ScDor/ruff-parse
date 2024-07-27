@@ -1,4 +1,6 @@
+import json
 from enum import Enum
+from pathlib import Path
 from typing import Any, Literal
 
 from pydantic import BaseModel, Field, RootModel
@@ -55,4 +57,7 @@ class RuleList(RootModel):
 
 
 def parse_rules(output: str) -> set[Rule]:
+    Path("aaa.json").write_text(output)
+    output = json.dumps(json.loads(output)[:3])
+    print(output)
     return set(RuleList.model_validate_json(output).root)

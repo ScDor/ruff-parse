@@ -7,6 +7,7 @@ authors = ["ScDor <18174994+ScDor@users.noreply.github.com>"]
 description = ""
 license = "GPL-3.0-or-later"
 name = "ruff_parse"
+packages = [{include = "ruff_parse"}]
 readme = "README.md"
 version = "0.1.0"
 
@@ -51,6 +52,9 @@ select = ["ALL"]
 
 [tool.ruff.lint.flake8-bugbear]
 extend-immutable-calls = ["typer.Argument", "typer.Option"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
 
 [tool.tomlsort]
 all = true

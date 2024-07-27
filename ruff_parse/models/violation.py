@@ -31,7 +31,6 @@ class Violation(BaseModel):
     noqa_row: int
     url: str
 
-
 class _ViolationList(RootModel):
     root: list[Violation]
 
