@@ -17,8 +17,8 @@ from models.rule import Rule, parse_rules
 
 class Ruff(NamedTuple):
     version: Version
-    rules: list[Rule]
-    configuration: ConfiguredRules | None
+    all_rules: list[Rule]
+    configured_rules: ConfiguredRules | None
 
 
 def parse_all(
