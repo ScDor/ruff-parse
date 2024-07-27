@@ -1,0 +1,59 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
+
+[tool.poetry]
+authors = ["ScDor <18174994+ScDor@users.noreply.github.com>"]
+description = ""
+license = "GPL-3.0-or-later"
+name = "ruff-parse"
+readme = "README.md"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+loguru = "^0.7.2"
+pydantic = "^2.8.2"
+python = "^3.10"
+packaging = "^24.1"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.7.1"
+
+[tool.ruff.lint]
+ignore = [
+  "ANN",
+  "COM812",
+  "D",
+  "DTZ",
+  "E501",
+  "EM101",
+  "EM102",
+  "FA",
+  "FBT001",
+  "FBT002",
+  "FIX002",
+  "G003",
+  "G004",
+  "INP001",
+  "ISC001",
+  "PD901",
+  "PLR0913",
+  "S113",
+  "S501",
+  "S603",
+  "S607",
+  "TD002",
+  "TD003",
+  "TD004",
+  "TRY003",
+]
+select = ["ALL"]
+
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = ["typer.Argument", "typer.Option"]
+
+[tool.tomlsort]
+all = true
+ignore_case = true
+in_place = true
+trailing_comma_inline_array = true
