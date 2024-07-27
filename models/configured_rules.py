@@ -5,7 +5,7 @@ from typing import NamedTuple
 import tomllib
 from loguru import logger
 
-from rule import Rule
+from models.rule import Rule
 
 _MIN_RULE_CODE_LEN = 4
 _DEFAULT_SELECT_RULES = ("E", "F")

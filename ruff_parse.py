@@ -12,7 +12,7 @@ from models.configured_rules import (
     _SupportedConfigurationFileNames,
     parse_configured_rules,
 )
-from rule import Rule, parse_rules
+from models.rule import Rule, parse_rules
 
 
 class Ruff(NamedTuple):
