@@ -1,4 +1,4 @@
-from enum import Enum, StrEnum
+from enum import Enum
 from pathlib import Path
 from typing import NamedTuple
 

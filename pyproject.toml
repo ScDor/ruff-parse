@@ -12,9 +12,9 @@ version = "0.1.0"
 
 [tool.poetry.dependencies]
 loguru = "^0.7.2"
+packaging = "^24.1"
 pydantic = "^2.8.2"
 python = "^3.10"
-packaging = "^24.1"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.7.1"
