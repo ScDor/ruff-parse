@@ -1,6 +1,6 @@
 from typing import Any
 
-from pydantic import BaseModel, RootModel
+from pydantic import BaseModel, Field, RootModel
 
 
 class _Location(BaseModel):
@@ -24,12 +24,13 @@ class Violation(BaseModel):
     cell: Any  # TODO handle notebook output
     code: str
     end_location: _Location
-    filename: str
+    file_name: str = Field(alias="filename")
     fix: _Fix | None
     location: _Location
     message: str
     noqa_row: int
     url: str
+
 
 class _ViolationList(RootModel):
     root: list[Violation]
